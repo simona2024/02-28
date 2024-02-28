@@ -29,15 +29,22 @@ if (!slaptazodis.includes('#')) {
 // 6.1. Jeigu amžius yra mažiau nei 0, tai parašyti jog įvestas amžius yra per mažas.
 // 6.2. Jeigu amžius yra daugau nei 120, tai parašyti jog įvestas amžius yra per didelis.
 
-let amzius = prompt ('enter your amzius')
-console.log(amzius)
+
+
+
+
+let amzius = Number(prompt ('enter your amzius'))
+
+if(isNaN(amzius)){
+    console.log('amzius turi buti skaicius')
+}
 if (amzius < 0 ) {
     console.log('amžius yra per mažas')
 }  else if(amzius <= 6) {
     console.log(`i mokykla neina`)
 }  else if (amzius <= 7) {
     console.log('Į mokyklą tikriausiai neina, tačiau gali būti ir pirmokas.')
-} else if(amzius <= 10) {
+} else if(amzius <= 10) {3
     console.log('eina į pradinę klasę')
 } else if(amzius <= 11) {
     console.log(`Tikriausiai mokosi pradinėje, tačiau gali būti ir penktokas.`)
@@ -53,6 +60,55 @@ if (amzius < 0 ) {
     console.log('Mokykla baiges')
 } else {
     console.log('amzius per didelis')
-}5
+}
 
+// GALVOSŪKIS: sukurti galvosūkį su keletu klausimu
+// PIRMAS LYGIS:
+// 1. Norint patekti į kitą lygį, reikia atsakyti bent į vieną klausimą iš dviejų:
+// 2. Jeigu atsakytas tik vienas klausimas, tai papildomai reikia parašyti kuris klausimas buvo neteisingas.
 
+let klausimas1 = 'geltona'
+let klausimas2 = 'raudona'
+
+let atsakymas1 = 'geltona'
+let atsakymas2 = 'raudona'
+
+if (klausimas1 === atsakymas1 && klausimas2 === atsakymas2 ) {
+     console.log('Patekai i kita lygi:abu atsakymai teisingi')
+  } else if (klausimas1 === atsakymas1 || klausimas2 === atsakymas2 ) {
+     console.log('Patekai i kita lygi:pirmas atsakymas buvo teisingas, o antras buvo neteisingas.')
+  } else {
+     console.log('Nepatekai i kita lygi:abu atsakymai buvo neteisingi')
+  } else if (klausimas1 === atsakymas1 || klausimas2 === atsakymas2 ) {
+     console.log('Patekai i kita lygi:pirmas atsakymas buvo teisingas, o antras buvo neteisingas.')
+  } else {
+    console.log('Nepatekai i kita lygi:abu atsakymai buvo neteisingi')
+  } else {
+    console.log('Nepatekai i kita lygi:abu atsakymai buvo neteisingi')
+  }
+  
+//   if (klausimas1 === '8' || atsakymas1 === '8') {
+//     console.log('Patekai i kita lygi: pirmas atsakymas buvo neteisingas, o antras buvo teisingas.')
+//   } 
+//   if () {
+//     console.log('Patekai i kita lygi: antras atsakymas buvo neteisingas, o pirmas buvo teisingas.')
+//   }
+ 
+// 1. Patekai i kita lygi: abu atsakymai teisingi.
+// 2. Patekai i kita lygi: pirmas atsakymas buvo neteisingas, o antras buvo teisingas.
+// 3. Patekai i kita lygi: antras atsakymas buvo neteisingas, o pirmas buvo teisingas.
+// 4. Nepatekai i kita lygi: abu atsakymai buvo neteisingi.
+ 
+// ANTRAS LYGIS:
+// 1. Norint patekti į kitą lygį, reikia atsakyti į abu klausimus iš dviejų:
+// 2. Jeigu atsakytas tik vienas klausimas, tai papildomai reikia parašyti kuris atsakymas buvo neteisingas.
+ 
+// 1. Patekai i kita lygi: abu atsakymai teisingi.
+// 2. Nepatekai i kita lygi: pirmas atsakymas buvo neteisingas, o antras buvo teisingas.
+// 3. Nepatekai i kita lygi: antras atsakymas buvo neteisingas, o pirmas buvo teisingas.
+// 4. Nepatekai i kita lygi: abu atsakymai buvo neteisingi.
+ 
+// TREČIAS LYGIS: 
+// 1. Trys klausimai ir į kitą lygį pereinama, jeigu atsakomi bent du klausimai.
+// 2. Jeigu atsakomi du klausimai, turi būti parodoma, kuris klausimas buvo neatsakytas.
+// 3. Jeigu atsakomi mažiau nei du klausimai, tai turi parodyti, kuris klausimas buvo atsakytas.
