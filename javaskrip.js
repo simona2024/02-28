@@ -66,6 +66,10 @@ if (amzius < 0 ) {
 // PIRMAS LYGIS:
 // 1. Norint patekti į kitą lygį, reikia atsakyti bent į vieną klausimą iš dviejų:
 // 2. Jeigu atsakytas tik vienas klausimas, tai papildomai reikia parašyti kuris klausimas buvo neteisingas.
+// 1. Patekai i kita lygi: abu atsakymai teisingi.
+// 2. Patekai i kita lygi: pirmas atsakymas buvo neteisingas, o antras buvo teisingas.
+// 3. Patekai i kita lygi: antras atsakymas buvo neteisingas, o pirmas buvo teisingas.
+// 4. Nepatekai i kita lygi: abu atsakymai buvo neteisingi.
 
 let klausimas1 = 'geltona'
 let klausimas2 = 'raudona'
@@ -77,29 +81,18 @@ if (klausimas1 === atsakymas1 && klausimas2 === atsakymas2 ) {
      console.log('Patekai i kita lygi:abu atsakymai teisingi')
   } else if (klausimas1 === atsakymas1 || klausimas2 === atsakymas2 ) {
      console.log('Patekai i kita lygi:pirmas atsakymas buvo teisingas, o antras buvo neteisingas.')
-  } else {
-     console.log('Nepatekai i kita lygi:abu atsakymai buvo neteisingi')
   } else if (klausimas1 === atsakymas1 || klausimas2 === atsakymas2 ) {
-     console.log('Patekai i kita lygi:pirmas atsakymas buvo teisingas, o antras buvo neteisingas.')
+     console.log('Patekai i kita lygi:pirmas atsakymas buvo neteisingas, o antras buvo teisingas.')
   } else {
     console.log('Nepatekai i kita lygi:abu atsakymai buvo neteisingi')
-  } else {
-    console.log('Nepatekai i kita lygi:abu atsakymai buvo neteisingi')
-  }
-  
+  } 
 //   if (klausimas1 === '8' || atsakymas1 === '8') {
 //     console.log('Patekai i kita lygi: pirmas atsakymas buvo neteisingas, o antras buvo teisingas.')
 //   } 
 //   if () {
 //     console.log('Patekai i kita lygi: antras atsakymas buvo neteisingas, o pirmas buvo teisingas.')
 //   }
- 
-// 1. Patekai i kita lygi: abu atsakymai teisingi.
-// 2. Patekai i kita lygi: pirmas atsakymas buvo neteisingas, o antras buvo teisingas.
-// 3. Patekai i kita lygi: antras atsakymas buvo neteisingas, o pirmas buvo teisingas.
-// 4. Nepatekai i kita lygi: abu atsakymai buvo neteisingi.
- 
-// ANTRAS LYGIS:
+ // ANTRAS LYGIS:
 // 1. Norint patekti į kitą lygį, reikia atsakyti į abu klausimus iš dviejų:
 // 2. Jeigu atsakytas tik vienas klausimas, tai papildomai reikia parašyti kuris atsakymas buvo neteisingas.
  
@@ -108,7 +101,49 @@ if (klausimas1 === atsakymas1 && klausimas2 === atsakymas2 ) {
 // 3. Nepatekai i kita lygi: antras atsakymas buvo neteisingas, o pirmas buvo teisingas.
 // 4. Nepatekai i kita lygi: abu atsakymai buvo neteisingi.
  
+let klausimas21 = 'geltona'
+let klausimas22 = 'raudona'
+
+let atsakymas21 = 'getona'
+let atsakymas22 = 'raudona'
+
+if (klausimas21 === atsakymas21 && klausimas22 === atsakymas22 ) {
+     console.log('Patekai i kita lygi:abu atsakymai teisingi')
+  } else if (klausimas21 !== atsakymas21 || klausimas22 === atsakymas22 ) {
+     console.log('Nepatekai i kita lygi:pirmas atsakymas buvo teisingas, o antras buvo neteisingas.')
+  } else if (klausimas21 === atsakymas21 || klausimas22 !== atsakymas22 ) {
+     console.log('nepatekai i kita lygi:pirmas atsakymas buvo neteisingas, o antras buvo teisingas.')
+  } else {
+    console.log('Nepatekai i kita lygi:abu atsakymai buvo neteisingi')
+  } 
+ 
+
 // TREČIAS LYGIS: 
 // 1. Trys klausimai ir į kitą lygį pereinama, jeigu atsakomi bent du klausimai.
 // 2. Jeigu atsakomi du klausimai, turi būti parodoma, kuris klausimas buvo neatsakytas.
 // 3. Jeigu atsakomi mažiau nei du klausimai, tai turi parodyti, kuris klausimas buvo atsakytas.
+
+let klausimas31 = 'geltona'
+let klausimas32 = 'raudona'
+let klausimas33 = 'zalia'
+
+let atsakymas31 = 'geltona'
+let atsakymas32 = 'rauona'
+let atsakymas33 = 'zlia'
+
+if (klausimas31 === atsakymas31 && klausimas32 === atsakymas32 && klausimas33 === atsakymas33 ) {
+    console.log('Patekai i kita lygi:visi atsakymai teisingi')
+} else if (klausimas31 === atsakymas31 && klausimas32 === atsakymas32 || klausimas33 !== atsakymas33 ) {
+    console.log('Patekai i kita lygi: taciau trecias atsakymas neteisingas')
+} else if (klausimas31 === atsakymas31 && klausimas32 !== atsakymas32 && klausimas33 !== atsakymas33 ) {
+    console.log('Patekai i kita lygi: taciau antras ir trecias atsakymai neteisingas')
+} else if (klausimas31 === atsakymas31 && klausimas32 !== atsakymas32 && klausimas33 == atsakymas33 ) {
+    console.log('Patekai i kita lygi: taciau antras atsakymas neteisingas')
+} else if (klausimas31 !== atsakymas31 || klausimas32 === atsakymas32 && klausimas33 === atsakymas33 ) {
+    console.log('Patekai i kita lygi: taciau pirmas atsakymai neteisingas')
+} else if (klausimas31 !== atsakymas31 && klausimas32 !== atsakymas32 && klausimas33 === atsakymas33 ) {
+    console.log('Patekai i kita lygi: taciau pirmas ir antras atsakymai neteisingas')
+} else if (klausimas31 !== atsakymas31 && klausimas32 !== atsakymas32 & klausimas33 === atsakymas33 ) {
+    console.log('Patekai i kita lygi: taciau antras ir trecias atsakymai neteisingas')
+} else { console.log('nepatekai i kita lyg5, visi ats neteisingi') 
+}
