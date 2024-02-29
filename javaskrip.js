@@ -123,27 +123,25 @@ if (klausimas21 === atsakymas21 && klausimas22 === atsakymas22 ) {
 // 2. Jeigu atsakomi du klausimai, turi būti parodoma, kuris klausimas buvo neatsakytas.
 // 3. Jeigu atsakomi mažiau nei du klausimai, tai turi parodyti, kuris klausimas buvo atsakytas.
 
-let klausimas31 = 'geltona'
-let klausimas32 = 'raudona'
-let klausimas33 = 'zalia'
+let klausimas31 = '1'
+let klausimas32 = '1'
+let klausimas33 = ''
 
-let atsakymas31 = 'geltona'
-let atsakymas32 = 'rauona'
-let atsakymas33 = 'zlia'
+let atsakymas31 = '1'
+let atsakymas32 = '0'
+let atsakymas33 = '4'
 
 if (klausimas31 === atsakymas31 && klausimas32 === atsakymas32 && klausimas33 === atsakymas33 ) {
     console.log('Patekai i kita lygi:visi atsakymai teisingi')
-} else if (klausimas31 === atsakymas31 && klausimas32 === atsakymas32 || klausimas33 !== atsakymas33 ) {
+} else if (klausimas31 === atsakymas31 && klausimas32 === atsakymas32) {
     console.log('Patekai i kita lygi: taciau trecias atsakymas neteisingas')
-} else if (klausimas31 === atsakymas31 && klausimas32 !== atsakymas32 && klausimas33 !== atsakymas33 ) {
+} else if (klausimas31 === atsakymas31 ) {
     console.log('Patekai i kita lygi: taciau antras ir trecias atsakymai neteisingas')
-} else if (klausimas31 === atsakymas31 && klausimas32 !== atsakymas32 && klausimas33 == atsakymas33 ) {
+} else if (klausimas31 === atsakymas31 && klausimas33 == atsakymas33 ) {
     console.log('Patekai i kita lygi: taciau antras atsakymas neteisingas')
-} else if (klausimas31 !== atsakymas31 || klausimas32 === atsakymas32 && klausimas33 === atsakymas33 ) {
+} else if ( klausimas32 === atsakymas32 && klausimas33 === atsakymas33 ) {
     console.log('Patekai i kita lygi: taciau pirmas atsakymai neteisingas')
-} else if (klausimas31 !== atsakymas31 && klausimas32 !== atsakymas32 && klausimas33 === atsakymas33 ) {
+} else if ( klausimas33 === atsakymas33 ) {
     console.log('Patekai i kita lygi: taciau pirmas ir antras atsakymai neteisingas')
-} else if (klausimas31 !== atsakymas31 && klausimas32 !== atsakymas32 & klausimas33 === atsakymas33 ) {
-    console.log('Patekai i kita lygi: taciau antras ir trecias atsakymai neteisingas')
 } else { console.log('nepatekai i kita lyg5, visi ats neteisingi') 
 }
