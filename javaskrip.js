@@ -105,13 +105,13 @@ let klausimas21 = 'geltona'
 let klausimas22 = 'raudona'
 
 let atsakymas21 = 'getona'
-let atsakymas22 = 'raudona'
+let atsakymas22 = 'raduoa'
 
 if (klausimas21 === atsakymas21 && klausimas22 === atsakymas22 ) {
      console.log('Patekai i kita lygi:abu atsakymai teisingi')
-  } else if (klausimas21 !== atsakymas21 || klausimas22 === atsakymas22 ) {
+  } else if (klausimas21 !== atsakymas21 && klausimas22 === atsakymas22 ) {
      console.log('Nepatekai i kita lygi:pirmas atsakymas buvo teisingas, o antras buvo neteisingas.')
-  } else if (klausimas21 === atsakymas21 || klausimas22 !== atsakymas22 ) {
+  } else if (klausimas21 === atsakymas21 && klausimas22 !== atsakymas22 ) {
      console.log('nepatekai i kita lygi:pirmas atsakymas buvo neteisingas, o antras buvo teisingas.')
   } else {
     console.log('Nepatekai i kita lygi:abu atsakymai buvo neteisingi')
@@ -125,11 +125,11 @@ if (klausimas21 === atsakymas21 && klausimas22 === atsakymas22 ) {
 
 let klausimas31 = '1'
 let klausimas32 = '1'
-let klausimas33 = ''
+let klausimas33 = '1'
 
 let atsakymas31 = '1'
 let atsakymas32 = '0'
-let atsakymas33 = '4'
+let atsakymas33 = '1'
 
 if (klausimas31 === atsakymas31 && klausimas32 === atsakymas32 && klausimas33 === atsakymas33 ) {
     console.log('Patekai i kita lygi:visi atsakymai teisingi')
